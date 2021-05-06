@@ -1,0 +1,23 @@
+
+server:
+  port: 8080
+spring:
+  application:
+    name: warehouse-service
+  cloud:
+    nacos:
+      discovery:
+        username: nacos
+        password: nacos
+        server-addr: 192.168.48.128
+        namespace: public
+dubbo:
+  application:
+    name: warehouse-dubbo
+  registry:
+    address: nacos://192.168.48.128:8848
+  protocol:
+    port: 20880
+    name: dubbo
+  scan:
+    base-packages: com.xes.online.warehouse.dubbo
