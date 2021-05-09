@@ -9,13 +9,13 @@ spring:
       discovery:
         username: nacos
         password: nacos
-        server-addr: 192.168.48.128
+        server-addr: 172.32.2.158:80
         namespace: public
 dubbo:
   application:
     name: warehouse-dubbo
   registry:
-    address: nacos://192.168.48.128:8848
+    address: nacos://172.32.2.158:80
   protocol:
     port: 20880
     name: dubbo
